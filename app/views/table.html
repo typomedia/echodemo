@@ -1,0 +1,24 @@
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Avatar</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Company</th>
+        <th>City</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{range .Users}}
+    <tr>
+        <td>{{ .ID }}</td>
+        <td><img class="avatar" src="{{ .Image }}" alt="{{ .FirstName }} {{ .LastName }}" /></td>
+        <td>{{ .FirstName }} {{ .LastName }}</td>
+        <td><a href="mailto:{{ .Email }}">{{ .Email }}</a></td>
+        <td>{{ .Company.Name }}</td>
+        <td>{{ .Address.City }}</td>
+    </tr>
+    {{end}}
+    </tbody>
+</table>

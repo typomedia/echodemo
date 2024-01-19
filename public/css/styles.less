@@ -1,0 +1,47 @@
+@import url(pico.min.css);
+@import url(../fonts/OpenSans/open-sans.css);
+
+@font-family: 'Open Sans', sans-serif;
+
+body {
+  font-family: @font-family;
+  font-size: 1em;
+  min-height: 100vh;
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    img.logo {
+      width: 10rem;
+      height: auto;
+      text-align: center;
+      margin: 0 auto 2rem;
+      display: block;
+    }
+    input#search {
+      background-color: #ffffff;
+    }
+    table {
+      td {
+        img.avatar {
+          height: 40px;
+          width: auto;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  footer {
+    padding: 0;
+    text-align: center;
+    .inline {
+      display: inline-block;
+      height: 1rem;
+      margin-bottom: 0.2rem;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @font-family;
+}

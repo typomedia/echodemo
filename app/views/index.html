@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <script defer src="/js/htmx.min.js#1.9.5"></script>
+    <title>{{ if .Search }} {{ .Search }} &ndash; Typopedia{{ else }}Typopedia{{ end }}</title>
+</head>
+<body>
+<main>
+    <a href="/"><img class="logo" src="/img/echo.svg" alt="Typopedia"></a>
+    <input type="text" id="search" name="search" list="results" autofocus
+           value="{{ .Search }}"
+           placeholder="Search&hellip;"
+           hx-target="#results"
+           hx-get="/api/html/search"
+           hx-trigger="keyup delay:500ms, load">
+    <div id="results"></div>
+</main>
+<footer>
+    <p>© 2024 <a href="https://github.com/typomedia">Typomedia Foundation, Philipp Speck</a>
+        &squarf; Powered by <a href="https://echo.labstack.com/">
+        <img src="/img/echo.svg" alt="Echo" class="inline">
+    </a></p>
+</footer>
+</body>
+</html>
